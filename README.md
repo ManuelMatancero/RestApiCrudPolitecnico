@@ -7,53 +7,96 @@ API Documentation en Swagger ------> https://apipolitecnico.uc.r.appspot.com/swa
 
 -----HOW TO RUN------
 Para obtener todos los registros de una entidad utilice las siguientes URL:
+
 GET
+
 https://apipolitecnico.uc.r.appspot.com/aula
+
 https://apipolitecnico.uc.r.appspot.com/estudiante
+
 https://apipolitecnico.uc.r.appspot.com/profesor
 
+
 Para insertar datos en una entidad utilice las siguientes URL:
+
 POST
+
 https://apipolitecnico.uc.r.appspot.com/aula
+
 https://apipolitecnico.uc.r.appspot.com/estudiante
+
 https://apipolitecnico.uc.r.appspot.com/profesor
 
 Para ingresar un registro nuevo debe indicarlo sin el identificacor en este caso el id,
 ya que este se genera automatico, los esquemas contienen el id, para agregar un nuevo registro
 debe obviar el id de lo contrario se realizara una actualizacion del registro con el id introducido en el schema.
 
+
 - El Schema de la entidad Profesor es el siguiente:
+
+
 {
+
 apellidos	        string
+
 fecha_creacion	  string
+
 fecha_eliminacion	string
+
 genero	          string
+
 id	              integer($int64)
+
 nombre	          string
+
 telefono	        string
+
 }
 
+
+
 - El Schema de la entidad Estudiante es el siguiente:
+
+
 {
+
 apellidos	  string
+
 genero	    string
+
 id	        integer($int64)
+
 nombre	    string
+
 telefono	  string
+
 }
+
+
 - El Schema de la entidad Aula es el siguiente:
+
+
 {
+
 cupo	     integer($int32)
+
 id	       integer($int64)
+
 ubicacion	 string
+
 }
 
 
 Para eliminar registros de una entidad:
+
 DELETE
+
 https://apipolitecnico.uc.r.appspot.com/aula
+
 https://apipolitecnico.uc.r.appspot.com/estudiante
+
 https://apipolitecnico.uc.r.appspot.com/profesor
+
 
 Cada una de las url seguido del Identificador de ese registro, ejemplo:
 https://apipolitecnico.uc.r.appspot.com/estudiante/2
